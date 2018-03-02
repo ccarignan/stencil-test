@@ -43,7 +43,9 @@ declare global {
   }
   namespace JSXElements {
     export interface AqNavAttributes extends HTMLAttributes {
-      name?: string;
+      userEmail?: string;
+      userImg?: string;
+      userName?: string;
     }
   }
 }

@@ -1,6 +1,6 @@
 export class AqNav {
     render() {
-        return (h("nav", { class: "uk-navbar uk-navbar-container" },
+        return (h("nav", { class: "uk-navbar-container", "uk-navbar": true },
             h("div", { class: "uk-navbar-left" },
                 h("span", { class: "uk-navbar-item uk-logo" },
                     h("slot", { name: "logo" })),
@@ -8,9 +8,76 @@ export class AqNav {
             h("div", { class: "uk-navbar-right" },
                 h("ul", { class: "uk-navbar-nav" },
                     h("li", null,
-                        h("a", { href: "https://github.com/acquia/acquia-uikit", target: "_blank" }, "GitHub"))))));
+                        h("a", { href: "#" }, "Help"),
+                        h("div", { class: "uk-navbar-dropdown aq-nav-dropdown-search", "uk-dropdown": "pos: bottom-right" },
+                            h("ul", { class: "uk-nav uk-navbar-dropdown-nav" },
+                                h("li", null,
+                                    h("a", { href: "#" }, "Help Documents")),
+                                h("li", null,
+                                    h("a", { href: "#" }, "Submit a Support Ticket")),
+                                h("li", null,
+                                    h("div", { class: "uk-inline" },
+                                        h("span", { class: "uk-form-icon uk-form-icon-flip", "uk-icon": "icon: search" }),
+                                        h("input", { class: "uk-input", type: "text" })))))),
+                    h("li", null,
+                        h("a", { href: "#" },
+                            h("span", { class: "uk-icon", "uk-icon": "icon: bell" }))),
+                    h("li", null,
+                        h("a", { href: "#" },
+                            h("span", { class: "uk-icon", "uk-icon": "icon: grid" })),
+                        h("div", { class: "uk-navbar-dropdown", "uk-dropdown": "pos: bottom-right" },
+                            h("ul", { class: "uk-nav uk-navbar-dropdown-nav uk-nav-parent-icon", "uk-nav": "multiple: true" },
+                                h("li", null,
+                                    h("a", { href: "#" }, "Acquia Cloud")),
+                                h("li", null,
+                                    h("a", { href: "#" }, "Acquia DAM")),
+                                h("li", null,
+                                    h("a", { href: "#" }, "Acquia Journey")),
+                                h("li", { class: "uk-parent" },
+                                    h("a", { href: "#" }, "Acquia Lift"),
+                                    h("ul", { class: "uk-nav-sub" },
+                                        h("li", null,
+                                            h("a", { href: "#" }, "Sub item")),
+                                        h("li", null,
+                                            h("a", { href: "#" }, "Sub item")),
+                                        h("li", null,
+                                            h("a", { href: "#" }, "Sub item")))),
+                                h("li", { class: "uk-nav-divider" }),
+                                h("li", null,
+                                    h("a", { href: "https://acquia.com" }, "Acquia.com"))))),
+                    h("li", null,
+                        h("a", { href: "#" }, this.userImg
+                            ? h("img", { class: "aq-nav-user-thumbnail", src: this.userImg, alt: "Profile" })
+                            : h("span", { class: "uk-icon", "uk-icon": "icon: user" })),
+                        h("div", { class: "uk-navbar-dropdown aq-nav-dropdown-profile", "uk-dropdown": "pos: bottom-right" },
+                            h("div", { class: "uk-grid-small", "uk-grid": true },
+                                h("div", { class: "uk-width-auto" }, this.userImg
+                                    ? h("img", { class: "aq-nav-user-avatar", src: this.userImg, alt: "Profile" })
+                                    : h("span", { class: "uk-icon", "uk-icon": "icon: user; ratio: 3" })),
+                                h("div", { class: "uk-width-expand" },
+                                    this.userName
+                                        ? h("div", null, this.userName)
+                                        : h("div", null, "Anonymous User"),
+                                    h("div", null, this.userEmail))),
+                            h("ul", { class: "uk-nav uk-navbar-dropdown-nav" },
+                                h("li", { class: "uk-nav-header" }, "Account"),
+                                h("li", null,
+                                    h("a", { href: "#" }, "My Permissions")),
+                                h("li", null,
+                                    h("a", { href: "#" }, "Account Settings")),
+                                h("li", null,
+                                    h("a", { href: "#" }, "Subscription Info")),
+                                h("li", { class: "uk-nav-divider" }),
+                                h("li", { class: "uk-nav-header" }, "Admin"),
+                                h("li", null,
+                                    h("a", { href: "#" }, "Billing Info")),
+                                h("li", null,
+                                    h("a", { href: "#" }, "Manage Users")),
+                                h("li", { class: "uk-nav-divider" }),
+                                h("li", null,
+                                    h("a", { href: "#" }, "Sign Out")))))))));
     }
     static get is() { return "aq-nav"; }
-    static get properties() { return { "name": { "type": String, "attr": "name" } }; }
+    static get properties() { return { "userEmail": { "type": String, "attr": "user-email" }, "userImg": { "type": String, "attr": "user-img" }, "userName": { "type": String, "attr": "user-name" } }; }
     static get style() { return "/**style-placeholder:aq-nav:**/"; }
 }

@@ -1,5 +1,7 @@
 import '../stencil.core';
 export declare class AqNav {
-    name: string;
+    userImg: string;
+    userName: string;
+    userEmail: string;
     render(): JSX.Element;
 }

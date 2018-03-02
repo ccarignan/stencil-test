@@ -14,7 +14,15 @@
       },
       "props": [
         {
-          "name": "name",
+          "name": "userEmail",
+          "type": "String"
+        },
+        {
+          "name": "userImg",
+          "type": "String"
+        },
+        {
+          "name": "userName",
           "type": "String"
         }
       ]
