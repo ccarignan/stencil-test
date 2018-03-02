@@ -1,0 +1,30 @@
+{
+  "components": [
+    {
+      "tag": "aq-nav",
+      "dependencies": [],
+      "componentClass": "AqNav",
+      "componentPath": "components/aq-nav.js",
+      "styles": {
+        "$": {
+          "stylePaths": [
+            "components/aq-nav.less"
+          ]
+        }
+      },
+      "props": [
+        {
+          "name": "name",
+          "type": "String"
+        }
+      ]
+    }
+  ],
+  "collections": [],
+  "compiler": {
+    "name": "@stencil/core",
+    "version": "0.6.16",
+    "typescriptVersion": "2.7.2"
+  },
+  "bundles": []
+}
