@@ -1,0 +1,24 @@
+{
+  "hosting": {
+    "rules": [
+      {
+        "include": "/",
+        "headers": [
+          {
+            "name": "Link",
+            "value": "</build/aqcomponents/aqcomponents.akch5wwe.js>;rel=preload;as=script"
+          }
+        ]
+      },
+      {
+        "include": "/build/aqcomponents/**",
+        "headers": [
+          {
+            "name": "Cache-Control",
+            "value": "public, max-age=31536000"
+          }
+        ]
+      }
+    ]
+  }
+}

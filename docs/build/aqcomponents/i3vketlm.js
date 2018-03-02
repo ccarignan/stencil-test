@@ -1,0 +1,2 @@
+/*! Built with http://stenciljs.com */
+const{h:a}=window.aqcomponents;class t{render(){return a("nav",{class:"uk-navbar uk-navbar-container"},a("div",{class:"uk-navbar-left"},a("span",{class:"uk-navbar-item uk-logo"},a("slot",{name:"logo"})),a("slot",{name:"navigation"})),a("div",{class:"uk-navbar-right"},a("ul",{class:"uk-navbar-nav"},a("li",null,a("a",{href:"https://github.com/acquia/acquia-uikit",target:"_blank"},"GitHub")))))}static get is(){return"aq-nav"}static get properties(){return{name:{type:String,attr:"name"}}}static get style(){return""}}export{t as AqNav};

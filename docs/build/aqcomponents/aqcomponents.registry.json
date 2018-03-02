@@ -2,11 +2,11 @@
   "namespace": "aqcomponents",
   "fsNamespace": "aqcomponents",
   "loader": "../aqcomponents.js",
-  "core": "aqcomponents.core.js",
-  "corePolyfilled": "es5-build-disabled.js",
+  "core": "aqcomponents.akch5wwe.js",
+  "corePolyfilled": "aqcomponents.ljlct5pr.js",
   "components": {
     "aq-nav": {
-      "$": "aq-nav"
+      "$": "i3vketlm"
     }
   }
 }
