@@ -6,7 +6,7 @@
         "headers": [
           {
             "name": "Link",
-            "value": "</build/aqcomponents/aqcomponents.akch5wwe.js>;rel=preload;as=script"
+            "value": "</build/aqcomponents/aqcomponents.core.js>;rel=preload;as=script"
           }
         ]
       },
